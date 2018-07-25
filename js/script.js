@@ -71,11 +71,4 @@ $('.login').on('click',function () {
         sendAjax('registration',username,password);
     });
 
-
-
-    
-
-
-
-
 });
