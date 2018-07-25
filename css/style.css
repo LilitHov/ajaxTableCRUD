@@ -2,6 +2,28 @@
 
 
 
-p{
-    font-family: 'Montserrat-light';
+body{
+    margin: 0;
+    padding: 0;
+    background: rgba(22,175,204,0.1);
+}
+
+header{
+    background: #0E6D7F;
+}
+
+h1 {
+    color: #68E7FF;
+    font-style: italic;
+}
+
+a, a:hover{
+    color: #0E6D7F;
+}
+.user-info{
+    background: #34737F;
+    color: #1BDBFF;
+}
+.nav-pills.task-list .nav-link.active{
+    background:#68E7FF ;
 }
