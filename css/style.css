@@ -6,6 +6,7 @@ body{
     margin: 0;
     padding: 0;
     background: rgba(22,175,204,0.1);
+    font-family: 'Montserrat-light' , sans-serif;
 }
 
 header{
@@ -26,4 +27,38 @@ a, a:hover{
 }
 .nav-pills.task-list .nav-link.active{
     background:#68E7FF ;
+}
+.form-control:focus{
+    border: 1px solid #1BDBFF;
+    box-shadow: none;
+}
+
+.registration.btn-primary,.login.btn-primary{
+    background:#1BDBFF ;
+    border-color: #1BDBFF;
+}
+.registration.btn-primary:hover,.login.btn-primary:hover{
+    background: #34737F;
+    border-color: #34737F;
+}
+
+/*//success*/
+.figure-caption.success-content h2,
+.figure-caption.success-content p{
+    color: #0E6D7F;
+}
+.reg-success-message{
+    display: none;
+}
+
+/*error*/
+.back-home-page{
+    background: #0E6D7F;
+    padding: 15px 30px;
+    color:#1BDBFF ;
+    text-decoration: none;
+}
+.back-home-page:hover{
+    background: #1BDBFF;
+    color:  #0E6D7F;
 }

@@ -6,28 +6,32 @@ $(document).ready(function () {
     });
 
 
+    // ajax
     var url = 'http://ajaxtesting.somee.com/api/values/';
+    // get table
     var tableBody = $('.user-info tbody');
 
+    // get all users
     function getUsers() {
-
         $.ajax({
             url: url+'getusers',
             type:'GET',
             success: function (response) {
                 response.forEach(function (index,i) {
-                    var tr = $('<tr>').append(
+                    var tr =
+                        $('<tr>').append(
                         $('<td>').text(i+1),
                         $('<td>').text(index.Id),
                         $('<td>').text(index.username),
-                        $('<td>').text(index.password)
-                    );
-                    tr.appendTo(tableBody);
+                        $('<td>').text(index.password));
+                        tr.appendTo(tableBody);
                 });
             }
         });
     }
-    getUsers();
+
+
+    // login and registration
     function sendAjax(type,username,password) {
         $.ajax({
             url: url + type,
@@ -38,18 +42,20 @@ $(document).ready(function () {
             success: function (response) {
                 if (type === 'login') {
                     if (response) {
-                        alert('ok')
+                        window.location.replace("success.html");
                     } else {
-                        alert('error')
+                        window.location.replace("error.html");
                     }
                 } else if (type === 'registration') {
                     tableBody.html('');
-                    alert();
+                    $('.reg-success-message').css('display','block');
                     getUsers();
                 }
             }
         });
     }
+
+    getUsers();
 
     // console.log(userDetails);
 $('.login').on('click',function () {
@@ -64,6 +70,12 @@ $('.login').on('click',function () {
         // console.log(username,password);
         sendAjax('registration',username,password);
     });
+
+
+
+    
+
+
 
 
 });

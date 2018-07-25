@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Ajax Tables</title>
-    <!--font-awesome-->
-    <link rel="stylesheet" href="css/font-awesome.all.min.css">
     <!--bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--custom styles-->
@@ -33,7 +31,7 @@
                     Task 2/ Log in
                 </a>
                 <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                    Task 3/Sign up
+                    Task 3/ Sign up
                 </a>
             </div>
         </div>
@@ -61,13 +59,13 @@
                             <form method="POST" class="log-in-form">
                                 <div class="form-group">
                                     <label for="userName">User name</label>
-                                    <input type="text" class="form-control" name="username" id="userName"  placeholder="Enter username">
+                                    <input type="text" class="form-control" name="username" id="userName"  placeholder="Enter user name">
                                 </div>
                                 <div class="form-group">
                                     <label for="userPassword">Password</label>
                                     <input type="password" class="form-control" name="password" id="userPassword" placeholder="Password">
                                 </div>
-                                <button type="button" class="btn btn-primary login">Submit</button>
+                                <button type="button" class="btn btn-primary login submit">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -77,14 +75,18 @@
                     <form method="POST" class="registration-form">
                         <div class="form-group">
                             <label for="regName">User name</label>
-                            <input type="text" class="form-control" name="regUsername" id="regName"  placeholder="Enter username">
+                            <input type="text" class="form-control " name="regUsername" id="regName"  placeholder="Enter user name">
                         </div>
                         <div class="form-group">
                             <label for="regPassword">Password</label>
                             <input type="password" class="form-control" name="regPassword" id="regPassword" placeholder="Password">
                         </div>
-                        <button type="button" class="btn btn-primary registration">Register</button>
+                        <button type="button" class="btn btn-primary registration submit">Register</button>
                     </form>
+                    <div class="alert alert-success mt-2 reg-success-message" role="alert">
+                        Everything is OK!
+                        You registered successfully!
+                    </div>
 
 
                 </div>
